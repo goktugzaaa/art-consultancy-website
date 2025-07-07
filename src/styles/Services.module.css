@@ -1,0 +1,201 @@
+.servicesContainer {
+  max-width: 90%;
+  margin: auto;
+  margin-top: 5%;
+  padding: 20px;
+  color: black;
+  margin-bottom:150px
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 2.4em;
+  margin-bottom: 150px;
+  line-height: 1.4;
+}
+
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.serviceItem {
+  border-top: 2px solid black;
+  overflow: hidden;
+}
+
+.serviceTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-size: 2.5em;
+  cursor: pointer;
+  border-right: 2px solid black;
+  line-height: 1.3;
+}
+
+.serviceArrow {
+  transition: transform 0.3s ease;
+}
+
+.serviceItem.active .serviceArrow {
+  transform: rotate(270deg);
+}
+
+.serviceItemContainer {
+  height: 0;
+  max-height: 1500px;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  background-color: transparent;
+  flex-direction: row;
+}
+
+.serviceImageContainer,
+.serviceDescriptionContainer {
+  width: auto;
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(50px); /* Başlangıçta aşağıda */
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Daha yumuşak geçiş */
+}
+
+.serviceDescriptionContainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.serviceItem.active .serviceImageContainer,
+.serviceItem.active .serviceDescriptionContainer {
+  opacity: 1;
+  transform: translateY(0); /* Aşağıdan yukarıya açılıyor */
+}
+
+.serviceItemContainer.active {
+  min-height: 600px;
+}
+
+.serviceImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.serviceDescription p {
+  font-size: 22px;
+  max-width: 100%;
+  height: auto;
+  align-items: center;
+}
+
+.serviceItem.active .serviceDescriptionContainer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* For Medium Screens (Tablets) */
+@media (max-width: 480px) {
+  .servicesItemContainer {
+    flex-direction: column;
+    height: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .servicesContainer {
+    max-width: 98%;
+  }
+
+  .mainTitle {
+    font-size: 1.3em;
+    line-height: 1.3;
+  }
+
+  .serviceTitle {
+    font-size: 1.7em;
+    line-height: 1.1;
+  }
+
+  .serviceItemContainer {
+    flex-direction: column-reverse;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    opacity: 1;
+  }
+
+  .serviceImageContainer,
+  .serviceDescriptionContainer {
+    width: 90%;
+    margin: auto;
+    opacity: 1;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .serviceDescriptionContainer p {
+    font-size: 22px;
+    text-align: left;
+    margin-top: 10px;
+    max-width: 100%;
+    line-height: 30px;
+    letter-spacing: 0.4;
+    font-weight: 500;
+    visibility: visible;
+  }
+}
+
+/* For Large Screens (Desktop) */
+@media (min-width: 1025px) {
+  .mainTitle {
+    font-size: 2.4em;
+    line-height: 1.5;
+  }
+
+  .serviceTitle {
+    font-size: 2.5em;
+  }
+
+  .serviceItemContainer {
+    flex-direction: row;
+  }
+
+  .serviceImageContainer,
+  .serviceDescriptionContainer {
+    width: 45%;
+  }
+
+  .serviceDescriptionContainer p {
+    font-size: 22px;
+  }
+}
+.aboutUs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  height: 600px;
+  
+}
+.aboutUsContent{
+  text-align: center;
+  width: 90%;
+}
+.aboutUsText{
+  font-size: 2rem;
+  text-align: center;
+}

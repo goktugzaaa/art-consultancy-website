@@ -1,0 +1,271 @@
+.navbar {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 4%;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  position: relative;
+  left: 50%;
+  top:2px;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.hamburgerBtn {
+  position: absolute;
+  right: 4%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburgerBar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburgerBar.otherPage {
+  background-color: black;
+}
+
+.hamburgerBar::before,
+.hamburgerBar::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburgerBar.otherPage::before,
+.hamburgerBar.otherPage::after {
+  background-color: black;
+}
+
+.hamburgerBar::before {
+  transform: translateY(-10px);
+}
+
+.hamburgerBar::after {
+  transform: translateY(10px);
+}
+
+.hamburgerBar.open {
+  background-color: transparent;
+}
+
+.hamburgerBar.open::before {
+  transform: rotate(45deg);
+  background-color: black;
+}
+
+.hamburgerBar.open::after {
+  transform: rotate(-45deg);
+  background-color: black;
+}
+
+.fullscreenMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 1em;
+  height: 100vh;
+  background-color: #F8F8F8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.fullscreenMenu.open {
+  opacity: 1;
+  visibility: visible;
+  overflow: hidden;
+}
+
+.logo.menuOpen,
+.otherPage .logo {
+  color: black;
+  transition: 0.3s;
+}
+
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  margin-left: 3%;
+  width: 100%;
+}
+
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 64px;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  padding: 0.3rem 1.5rem;
+  width: 95%;
+  border-top: 2px solid #000;
+}
+
+.menuItem::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2px;
+  height: 80%;
+  background-color: #000;
+}
+
+.menuItem span {
+  flex-grow: 2;
+}
+
+.menuItem::after {
+  content: "→";
+  position: absolute;
+  right: 20px;
+  opacity: 1;
+  transition: none;
+}
+
+.menuItem:hover span::after {
+  opacity: 1;
+  right: -60px;
+}
+
+.fullscreenMenu.open .menuItem {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mainTitle {
+  color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.6rem;
+}
+
+.otherPage {
+  position: relative;
+  background-color: #F8F8F8;
+}
+
+@media screen and (max-width: 1483px) {
+  .hamburgerBtn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  .menuItem {
+    font-size: 2.3rem;
+  }
+
+  .fullscreenMenu {
+    font-size: 3.5em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hamburgerBtn {
+    width: 45px;
+    height: 45px;
+  }
+
+  .logo {
+    font-size: 2.2rem;
+  }
+
+  .menuItem {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hamburgerBtn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .menuItem {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mainTitle {
+    display: none;
+  }
+
+  .navbar {
+    padding: 8% 8%;
+  }
+
+  .hamburgerBtn {
+    width: 45px;
+    height: 45px;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .menuItems {
+    gap: 0.5rem;
+  }
+
+  .menuItem {
+    font-size: 2rem;
+    border-top: 1px solid #000;
+  }
+
+  .menuItem::before {
+    width: 1px;
+  }
+}

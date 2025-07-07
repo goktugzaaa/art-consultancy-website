@@ -1,0 +1,73 @@
+.contactsSection{
+    color:black;
+    
+}
+
+.contactContent{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.5em;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center; /* Dikey hizalama */
+    gap: 15px; /* h3 ile p arasında boşluk */
+  }
+  
+  .contactItem a,.contactItem p {
+    display: inline-block; /* Çizginin tüm metni kapsaması için */
+    border-bottom: 2px solid black; /* Çizginin kesintisiz devam etmesi için */
+    
+  }
+  
+  
+  .emailLink {
+    text-decoration: none; /* Altı çizili olmasını istemiyorsan */
+    color: inherit; /* Metin renginin genel tasarıma uymasını sağlamak için */
+     /* Daha belirgin görünmesi için */
+  }
+  
+  
+.title{
+    font-size: 1.5em;
+}
+@media screen and (max-width: 768px) {
+    .contactContent{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contactItem {
+        margin-bottom: 20px;
+    }
+    .contactItem a,.contactItem p {
+        border-bottom: none;
+    }
+    .emailLink {
+        border-bottom: 2px solid black;
+    }
+    .title{
+        font-size: 1.2em;
+    }
+  
+}
+@media screen and (max-width: 480px) {
+    .contactContent{
+        font-size: 1.2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .title{
+        font-size: 1.2em;
+    }
+    .contactInfo{
+      margin-top: 50px;
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid black;
+    }
+  
+}

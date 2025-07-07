@@ -1,0 +1,107 @@
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactTitle {
+  text-align: center;
+  font-size: 22px;  /* Yazı boyutunu büyüttüm */
+  margin-bottom: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroupRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+}
+
+.label {
+  font-size: 0.9em;  /* Yazı boyutunu büyüttüm */
+}
+
+.inputField, .textareaField {
+  width: 100%;
+  border-radius: 0;
+  padding: 12px;
+  border-bottom: 1px solid black;
+  font-size: 16px;  /* Yazı boyutunu büyüttüm */
+  color: #333;
+  background-color: transparent;
+  transition: border-color 0.3s ease-in-out;
+  margin-bottom: 8px;
+}
+
+.inputField:focus, .textareaField:focus {
+  border-color: rgb(25, 217, 25);
+  outline: none;
+  border-radius: 0;
+}
+
+.textareaField {
+  resize: none;
+  min-height: 40px;
+}
+
+.submitButton {
+  
+  width: 100%;
+  padding: 12px;
+ color: black;
+  font-size: 1em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin-top: 10px;
+}
+.submitButton:hover{
+  transition: 0.30s;
+  color: rgb(25, 217, 25);
+  
+}
+@media screen and (max-width: 768px) {
+  .contactForm {
+    width: 100%;
+  }
+  .formGroupRow {
+    flex-direction: column;
+  }
+  .label {
+    font-size: 1em;
+  }
+  .inputField, .textareaField {
+    font-size: 1em;
+  }
+  .submitButton {
+    font-size: 1.2em;
+  }
+  
+}
+@media screen and (max-width: 480px) {
+  .contactForm {
+    width: 100%;
+  }
+  .formGroupRow {
+    flex-direction: column;
+  }
+  .label {
+    font-size: 1em;
+  }
+  .inputField, .textareaField {
+    font-size: 1em;
+  }
+  .submitButton {
+    font-size: 1.2em;
+  }
+  
+}
+
+

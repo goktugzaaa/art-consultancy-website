@@ -1,0 +1,19 @@
+{
+    "pageTitles": {
+      "/about": "Hakkımızda",
+      "/services": "Hizmetler",
+      "/projects": "Projeler",
+      "/contact": "İletişim",
+      "/artists": "Sanatçılar",
+      "/journal": "Jurnal"
+    },
+    "menuItems": {
+      "/about": "Hakkımızda",
+      "/projects": "Projelerimiz",
+      "/services": "Hizmetler",
+      "/artists": "Sanatçılar",
+      "/journal": "Jurnal",
+      "/contact": "İletişim"
+    }
+  }
+  

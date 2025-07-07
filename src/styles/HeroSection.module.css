@@ -1,0 +1,114 @@
+.heroSection {
+  font-family: "maiola",sans-serif;
+  position: relative; /* ÖNEMLİ: Overlay'in tam oturması için */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Video Arka Planı */
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Karartma Efekti */
+.overlay {
+  position: absolute; /* ÖNEMLİ: Overlay'in tam oturmasını sağlar */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Yarı saydam siyah katman */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Yazılar */
+.title {
+  font-size: clamp(2rem, 5vw, 6rem); /* Küçük ekranda küçülsün, büyük ekranda büyüsün */
+  color: white;
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.slogan {
+  font-size: clamp(1rem, 2vw, 2.5rem); /* Küçük ekranda küçülsün, büyük ekranda büyüsün */
+  color: white;
+  margin-top: 10px;
+  font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* 1440px üzerindeki ekranlar için */
+@media (min-width: 1440px) {
+  .heroSection {
+    padding: 0 10%;
+  }
+
+  .title {
+    font-size:7rem;
+  }
+
+  .slogan {
+    font-size: 2.2rem;
+  }
+}
+
+/* Tablet ve küçük dizüstüler (768px - 1024px) */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  .slogan {
+    font-size: 1.8rem;
+  }
+}
+
+/* Küçük ekranlar (mobil cihazlar) */
+@media (max-width: 768px) {
+  .heroSection {
+    height: 100vh; /* Mobilde biraz daha kısa olsun */
+    padding: 10px;
+  }
+
+  .overlay {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 3rem; /* Daha küçük başlık */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  }
+
+  .slogan {
+    font-size: 1.5rem; /* Mobilde okunabilir boyutta slogan */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Daha küçük ekranlar (380px ve altı) */
+@media (max-width: 380px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .slogan {
+    font-size: 1.2rem;
+  }
+}

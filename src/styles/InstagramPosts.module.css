@@ -1,0 +1,18 @@
+.instagramGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  .instagramItem img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .instagramItem:hover img {
+    opacity: 0.8;
+  }
+  

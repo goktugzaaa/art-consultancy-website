@@ -1,0 +1,44 @@
+.teamPic{
+    object-fit: contain;
+    width: 90%;
+    object-position:center;
+
+}
+
+.teamPicInfo{
+    margin-top:8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.teamPicInfo span{
+    color:black;
+    font-size: 1.5em;
+    margin-bottom:30px;
+    font-weight: normal;
+}
+.teamInfo{
+    color:black;
+    width: 50%;
+    font-size: 1.4em;
+    line-height: 1.2;   
+    font-weight: normal;
+}
+@media screen and (max-width: 768px) {
+    .teamPic{
+        width: 100%;
+    }
+    .teamPicInfo span{
+        font-size: 1em;
+    }
+    .teamInfo span{
+        font-size: 1em;
+    }
+    .teamInfo{
+        width: 90%;
+        font-size: 1em;
+    }
+    
+}

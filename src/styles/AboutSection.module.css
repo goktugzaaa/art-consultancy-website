@@ -1,0 +1,130 @@
+.aboutText {
+  font-size: 58px;
+  line-height: 75px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+.aboutTextOtherPage{
+  font-size: 2.5rem;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.learnMoreContainer {
+  text-align: center;
+  margin-top: 2%;
+}
+
+.learnMore {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.8em;
+  letter-spacing: 1px;
+  color: black;
+  text-align: center;
+}
+
+.learnMore span {
+  font-weight: bold;
+}
+
+.learnMore:hover {
+  text-decoration: underline;
+  transition: 0.25s;
+}
+
+.arrow {
+  margin-left: 10px;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 768px) {
+ 
+  .aboutText {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .learnMore {
+    font-size: 1.2rem;
+  }
+  .scrollDown {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container{
+    padding: 0;
+    margin: 0;
+    height: max-content;
+  }
+  .aboutSectionContainer {
+    padding: 20px 0;
+    height: 300px;
+    margin-top: 5%;
+    margin-bottom: 20px;
+  }
+  .aboutSection{
+    justify-content:flex-start;
+    height:320px;
+  }
+ 
+  .aboutTextContainer {
+    width: 100%;
+  }
+  .aboutText {
+    text-align: left;
+    word-wrap: break-word;
+    font-size: 23px;
+    line-height: 28px;
+    font-weight: 500;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .aboutTextOtherPage{
+    margin-top: 20%;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .learnMore {
+    font-size: 1.3rem;
+  }
+}
+
+.scrollDownContainer {
+  text-align: center;
+  margin-top: 0.2rem;
+}
+
+.scrollDown {
+  background: none;
+  border: none;
+  font-size: 5.5em;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: 300;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.scrollDown:hover {
+  animation-play-state: paused;
+}

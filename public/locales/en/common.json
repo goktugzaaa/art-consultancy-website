@@ -1,0 +1,19 @@
+{
+    "pageTitles": {
+      "/about": "About Us",
+      "/services": "Services",
+      "/projects": "Projects",
+      "/contact": "Contact",
+      "/artists": "Artists",
+      "/journal": "Journal"
+    },
+    "menuItems": {
+      "/about": "About Us",
+      "/projects": "Projects",
+      "/services": "Services",
+      "/artists": "Artists",
+      "/journal": "Journal",
+      "/contact": "Contact"
+    }
+  }
+  
